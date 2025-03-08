@@ -1,0 +1,71 @@
+:root {
+    --accent: #46dd00;
+    --accent-off: #36aa00;
+    --forground: #000000;
+    --forground-off: #1f1f1f;
+    --background: #d5e6ed;
+    --background-off: #b1c0c7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --forground: #ffffff;
+        --forground-off: #b1c0c7;
+        --background: #252525;
+        --background-off: #191919;
+    }
+}
+
+html {
+    background-color: var(--background-off);
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    max-width: 1200px;
+
+    background-color: var(--background);
+    color: var(--forground-off);
+}
+
+/* MAIN */
+main {
+    position: relative;
+    --pad: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    padding: 50px;
+    padding-top: 0;
+    color: var(--forground);
+    box-sizing: border-box;
+    padding: var(--pad);
+    border-radius: 10px;
+    border-color: var(--accent-off);
+    width: 95%;
+    transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0);
+    margin-left: var(--pad);
+    margin-right: var(--pad);
+    --main-height: 100%
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:active {
+    color: var(--accent-off);
+}
+
+.banner {
+    background-color: var(--accent-off);
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
