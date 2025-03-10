@@ -1,18 +1,26 @@
 :root {
-    --accent: #46dd00;
-    --accent-off: #36aa00;
-    --forground: #000000;
-    --forground-off: #1f1f1f;
-    --background: #d5e6ed;
-    --background-off: #b1c0c7;
+    --base-accent: #247000;
+    --base-accent-off: #46dd00;
+    --base-forground: #000000;
+    --base-forground-off: #1f1f1f;
+    --base-background: #d5e6ed;
+    --base-background-off: #b1c0c7;
+    --accent: var(--base-accent);
+    --accent-off: var(--base-accent-off);
+    --forground: var(--base-forground);
+    --forground-off: var(--base-forground-off);
+    --background: var(--base-background);
+    --background-off: var(--base-background-off);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --forground: #ffffff;
-        --forground-off: #b1c0c7;
-        --background: #252525;
-        --background-off: #191919;
+        --accent: var(--base-accent-off);
+        --accent-off: var(--base-accent);
+        --forground: var(--base-background-off);
+        --forground-off: var(--base-background);
+        --background: var(--base-forground-off);
+        --background-off: var(--base-forground);
     }
 }
 
@@ -39,21 +47,21 @@ main {
     overflow-y: auto;
     padding: 50px;
     padding-top: 0;
-    color: var(--forground);
     box-sizing: border-box;
     padding: var(--pad);
     border-radius: 10px;
     border-color: var(--accent-off);
-    width: 95%;
-    transform: translate(calc((100vw - 100%) / 2 - var(--pad)), 0);
     margin-left: var(--pad);
     margin-right: var(--pad);
-    --main-height: 100%
 }
 
 h1 {
     text-align: center;
 }
+
+/* h2 {
+    text-align: center;
+} */
 
 a {
     color: var(--accent);
@@ -68,4 +76,12 @@ a:active {
     padding: 5px;
     text-align: center;
     border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
 }
