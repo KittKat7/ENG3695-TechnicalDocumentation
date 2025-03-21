@@ -66,6 +66,7 @@ header {
     width: 100%;
     padding: 1em;
     background-color: var(--primary-light);
+    color: var(--secondary-light);
     text-align: center;
     z-index: 999;
 }
@@ -99,14 +100,12 @@ a:active {
     color: var(--primary-light);
 }
 
-header,
-a {
-    color: var(--base-secondary-dark);
+header a {
+    color: var(--secondary-light);
 }
 
-header,
-a:active {
-    color: var(--base-secondary-light);
+header a:active {
+    color: var(--secondary-light);
 }
 
 details {
