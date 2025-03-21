@@ -63,8 +63,11 @@ body {
 
 header {
     position: fixed;
+    max-width: 1200px;
     width: 100%;
     padding: 1em;
+    padding-left: 0;
+    padding-right: 0;
     background-color: var(--primary-light);
     color: var(--secondary-light);
     text-align: center;
