@@ -192,3 +192,9 @@ tr:hover {
 .column img {
     width: 100%;
 }
+
+.illustration {
+    display: block;
+    margin: auto;
+    width: 75%;
+}
